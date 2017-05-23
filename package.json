@@ -1,0 +1,38 @@
+{
+  "name": "guid",
+  "version": "1.0.0",
+  "description": "Generate globally unique ids with a built-in timestamp",
+  "main": "build/index.js",
+  "repository": "https://github.com/ben-x9/guid.git",
+  "author": "Ben Lambert",
+  "license": "MIT",
+  "scripts": {
+    "install": "npm run build",
+    "build": "a=`find src -type f | grep '\\.ts$'`; tsc -d --outDir build $a",
+    "lint": "a=`find src test types -type f | grep '\\.ts$'`; tslint -p tsconfig.json --type-check $a",
+    "test": "mocha-webpack",
+    "test:watch": "npm run test -- --watch",
+    "test:browser": "webpack-dev-server --config webpack/config.test.browser.js --hot"
+  },
+  "dependencies": {
+    "@types/bs58": "^3.0.30",
+    "bs58": "^4.0.0",
+    "get-random-values": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^3.5.2",
+    "@types/mocha": "^2.2.41",
+    "chai": "^3.5.0",
+    "lodash": "^4.17.4",
+    "mocha": "^3.3.0",
+    "mocha-loader": "^1.1.1",
+    "mocha-webpack": "^0.7.0",
+    "source-map-support": "^0.4.15",
+    "ts-loader": "^2.0.3",
+    "tslint": "^5.2.0",
+    "tslint-eslint-rules": "^4.1.0",
+    "typescript": "^2.3.2",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
