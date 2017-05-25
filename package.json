@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Generate globally unique ids with a built-in timestamp",
   "main": "build/index.js",
+  "typings": "build/index.d.ts",
   "repository": "https://github.com/ben-x9/guid.git",
   "author": "Ben Lambert",
   "license": "MIT",
