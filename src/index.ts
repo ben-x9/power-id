@@ -4,6 +4,8 @@ import * as getRandomValues from "get-random-values"
 let epoch = 0
 let epochIsSet = false
 
+export type Id = string
+
 /*
 Begin timestamps at an offset from the Unix epoch to extend the lifespan of
 our GUIDs
